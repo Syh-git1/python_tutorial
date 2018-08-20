@@ -27,6 +27,11 @@ def findMinAndMax(L):
             if n < min:
                 min = n
         return (min,max)
+def f(x):
+    return x*x
+
+def normalize(name):
+    return name[0].upper()+name[1:].lower()
 
 if __name__ == '__main__':
     if trim('hello  ') != 'hello':
@@ -54,3 +59,26 @@ if __name__ == '__main__':
         print('测试失败!')
     else:
         print('测试成功!')
+    a = list(range(1,11))
+    print(a)
+
+    list1 = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+    r = map(f, list1)
+    print(list(r))
+
+
+    print(map(str, list1))
+    print(list(map(str,list1)))
+
+#利用map()函数，把用户输入的不规范的英文名字，变为首字母大写，
+# 其他小写的规范名字。输入：['adam', 'LISA', 'barT']，
+# 输出：['Adam', 'Lisa', 'Bart']：
+    L1 = ['adam', 'LISA', 'barT']
+    L2 = list(map(normalize, L1))
+    print(L2)
+
+
+
+
+
